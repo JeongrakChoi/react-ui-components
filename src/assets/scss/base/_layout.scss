@@ -1,0 +1,86 @@
+/* wrap */
+.wrap {
+  position: relative;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  .header + & {
+    padding-top: calc(env(safe-area-inset-top) + 60px);
+  }
+
+  &.fullScreen {
+    height: 100%;
+  }
+}
+
+/* inner content */
+.innerContent {
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .fullScreen & {
+    height: 100%;
+  }
+}
+
+/* inner-over 100% content */
+.innerOver {
+  margin: 0 -20px;
+}
+
+/* header */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: $color-white;
+  padding-top: calc(env(safe-area-inset-top));
+  --padding-top: calc(env(safe-area-inset-top));
+  z-index: 10;
+  box-shadow: 0px 6px 60px rgba(0, 0, 0, 0.04);
+
+  .headerPlace {
+    position: relative;
+    height: 60px;
+    background: $color-white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .headerTitle {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    font-size: 23px;
+    font-weight: 700;
+    color: $color-black;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-left: 3px;
+    }
+  }
+
+  .leftBtn {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .rightBtn {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .headerProgress {
+    margin: 0 10px;
+    --progress-background: #f6e44c;
+    --buffer-background: #f5f5f5;
+  }
+}

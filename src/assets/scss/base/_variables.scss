@@ -1,0 +1,25 @@
+/* color */
+$color-black : #212121;
+$color-white : #FFF;
+$color-gray : #EEE;
+
+$color-theme : #F6E44C;
+$color-theme2 : #94892E;
+$color-theme3 : #724E3B;
+
+$color-valid : #12D18E;
+$color-error : #F75555;
+$color-disabled : #CCF0EA;
+
+/* filter */
+$color-theme-filter:invert(88%) sepia(23%) saturate(1195%) hue-rotate(357deg) brightness(104%) contrast(93%);
+
+/* ai class */
+$color-aiClass01 : #FF981F;
+$color-aiClass02 : #48ABF3;
+$color-aiClass03 : #C871D2;
+
+/* Ionic color */
+:root{
+  --ion-color-primary:#212121;
+}

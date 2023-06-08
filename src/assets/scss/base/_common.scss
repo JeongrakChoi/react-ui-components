@@ -1,0 +1,197 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent !important;
+}
+html,
+body {
+  font-weight: normal;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+th {
+  font-weight: normal;
+}
+form,
+fieldset,
+iframe {
+  display: block;
+  border: 0;
+}
+img,
+button {
+  border: none;
+  vertical-align: middle;
+}
+hr {
+  height: 0;
+  display: none;
+}
+i,
+em,
+address {
+  font-style: normal;
+}
+em {
+  font-weight: 700;
+}
+label,
+button {
+  cursor: pointer;
+}
+blockquote,
+q {
+  quotes: none;
+}
+caption,
+.hide {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  text-indent: -9999em;
+}
+legend {
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  text-indent: -100%;
+  white-space: nowrap;
+  z-index: -1;
+}
+input,
+textarea,
+select,
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='search'],
+input[type='image'],
+input[type='tel'],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+input:focus {
+  outline: none;
+}
+::-webkit-input-placeholder {
+  color: #999;
+}
+::-moz-selection {
+  background: #005aab;
+  color: #fff;
+  text-shadow: none;
+}
+::-webkit-selection {
+  background: #005aab;
+  color: #fff;
+  text-shadow: none;
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+button {
+  display: inline-block;
+  background: none;
+  border: none;
+  outline: none;
+}
+sup {
+  vertical-align: super;
+  font-family: inherit;
+  font-size: 0.5em;
+  line-height: 1;
+}
+::selection {
+  background: #005aab;
+  color: #fff;
+  text-shadow: none;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  display: inline;
+}
+.clear {
+  clear: both;
+}
+.underLine {
+  text-decoration: underline;
+}
+
+/* img drag 방지 */
+img {
+  -webkit-user-drag: none;
+}
+ion-img:root * {
+  -webkit-user-drag: none;
+}
+ion-button {
+  --box-shadow: none;
+  --background-activated: initial;
+  --background-focused: initial;
+  --background-hover: initial;
+  --background: transparent;
+}
+
+/* font */
+:root,
+html,
+body,
+input,
+textarea,
+select,
+button,
+ion-title,
+ion-label,
+.ios,
+.md {
+  font-family: 'Noto Sans KR', 'Noto Sans', Arial, dotum, sans-serif;
+  font-size: 12px;
+  color: $color-black;
+  --color: $color-black;
+  letter-spacing: 0;
+  font-weight: 400;
+}

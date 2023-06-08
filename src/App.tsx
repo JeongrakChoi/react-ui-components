@@ -1,8 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 
-function App() {
-  return <div className="App">123</div>;
-}
+import { HashRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+
+import Main from './pages/main/Main';
+
+import './assets/scss/ui.scss';
+
+const App = () => {
+  return (
+    <div className="App">
+      <Router basename={process.env.PUBLIC_URL}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+        </Routes>
+      </Router>
+    </div>
+  );
+};
 
 export default App;
