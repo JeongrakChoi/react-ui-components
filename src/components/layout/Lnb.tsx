@@ -12,12 +12,13 @@ const Lnb = () => {
 
   return (
     <nav className="lnb">
+      <h2>NAVIGATION</h2>
       <ul>
         <li>
-          <button onClick={() => handleLinkClick('con01')}>con01</button>
+          <button onClick={() => handleLinkClick('button')}>Button</button>
         </li>
         <li>
-          <button onClick={() => handleLinkClick('con02')}>con02</button>
+          <button onClick={() => handleLinkClick('input')}>Input</button>
         </li>
       </ul>
     </nav>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-type UiBoxProps = {
+type CardProps = {
   title?: string;
   children?: React.ReactNode;
   idName?: string;
@@ -8,13 +8,13 @@ type UiBoxProps = {
   onClick?: () => void;
 };
 
-const UiBox = ({ title, children, idName, className, onClick }: UiBoxProps) => {
+const Card = ({ title, children, idName, className, onClick }: CardProps) => {
   return (
-    <div id={idName} className={`uiBox ${className}`} onClick={onClick}>
+    <div id={idName} className={`card ${className}`} onClick={onClick}>
       <h2>{title}</h2>
       <div className="con">{children}</div>
     </div>
   );
 };
 
-export default UiBox;
+export default Card;
