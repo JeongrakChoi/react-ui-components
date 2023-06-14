@@ -1,0 +1,17 @@
+.uiBox {
+  position: relative;
+  margin-bottom: 150px;
+
+  > h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .con {
+    margin-top: 20px;
+  }
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}

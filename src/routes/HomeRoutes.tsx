@@ -3,14 +3,15 @@ import { Route, Routes } from 'react-router-dom';
 
 import Lnb from '../components/layout/Lnb';
 
-import Main from '../pages/main/Main';
+import Home from '../pages/Home';
 
 const HomeRoutes = () => {
   return (
     <>
       <Lnb />
       <Routes>
-        <Route path="main" element={<Main />}></Route>
+        {/* <Route path="home" element={<Home />}></Route> */}
+        <Route path="/" element={<Home />}></Route>
       </Routes>
     </>
   );
