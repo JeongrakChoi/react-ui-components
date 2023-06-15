@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-ui-components/static/css/main.5e7c9db6.css",
-    "main.js": "/react-ui-components/static/js/main.1aa01192.js",
+    "main.js": "/react-ui-components/static/js/main.1db986b0.js",
     "index.html": "/react-ui-components/index.html",
     "static/media/ico_mail.svg": "/react-ui-components/static/media/ico_mail.1cd548a840ea8138d577.svg",
     "static/media/ico_lock.svg": "/react-ui-components/static/media/ico_lock.a15d875ba5aedf26c512.svg",
     "static/media/ico_checked.svg": "/react-ui-components/static/media/ico_checked.8a3c8a320676199a5aac.svg",
     "main.5e7c9db6.css.map": "/react-ui-components/static/css/main.5e7c9db6.css.map",
-    "main.1aa01192.js.map": "/react-ui-components/static/js/main.1aa01192.js.map"
+    "main.1db986b0.js.map": "/react-ui-components/static/js/main.1db986b0.js.map"
   },
   "entrypoints": [
     "static/css/main.5e7c9db6.css",
-    "static/js/main.1aa01192.js"
+    "static/js/main.1db986b0.js"
   ]
 }
