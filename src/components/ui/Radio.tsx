@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 
 type RadioProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   value: string;
   name: string;
   defaultChecked?: boolean;
