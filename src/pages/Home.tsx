@@ -8,6 +8,8 @@ import Input from '../components/ui/Input';
 import Check from '../components/ui/Check';
 import RadioGroup from '../components/ui/RadioGroup';
 import Radio from '../components/ui/Radio';
+import Modal from '../components/ui/Modal';
+import Confirm from '../components/ui/Confirm';
 
 const Home = () => {
   // Check Box Code
@@ -25,6 +27,37 @@ const Home = () => {
 
   const handleCheckChange3 = (checked: boolean) => {
     setIsChecked3(checked);
+  };
+
+  // Modal Code
+  const [bottomModalOpen, setbottomModalOpen] = useState(false);
+  const [fullModalOpen, setFullModalOpen] = useState(false);
+
+  const openBottomModal = () => {
+    setbottomModalOpen(true);
+  };
+
+  const closeBottomModal = () => {
+    setbottomModalOpen(false);
+  };
+
+  const openFullModal = () => {
+    setFullModalOpen(true);
+  };
+
+  const closeFullModal = () => {
+    setFullModalOpen(false);
+  };
+
+  // Confirm Code
+  const [confirmOpen, setConfirmOpen] = useState(false);
+
+  const openConfirm = () => {
+    setConfirmOpen(true);
+  };
+
+  const closeConfirm = () => {
+    setConfirmOpen(false);
   };
 
   return (
@@ -91,6 +124,34 @@ const Home = () => {
               Radio 4 (Disabled)
             </Radio>
           </RadioGroup>
+        </Card>
+
+        {/* MODAL */}
+        <Card idName="modal" title="Modal">
+          <Button className="bold" onClick={openBottomModal}>
+            Modal Open (Bottom Sheet)
+          </Button>{' '}
+          <hr />
+          <Button className="bold" onClick={openFullModal}>
+            Modal Open (Full Page)
+          </Button>
+          <Modal className="bottom" open={bottomModalOpen} close={closeBottomModal} title="Title">
+            Modal Popup
+          </Modal>
+          <Modal className="full" open={fullModalOpen} close={closeFullModal} title="Title">
+            Modal Popup
+          </Modal>
+        </Card>
+
+        {/* CONFIRM */}
+        <Card idName="confirm" title="Confirm">
+          <Button className="bold" onClick={openConfirm}>
+            Confirm Open
+          </Button>
+
+          <Confirm open={confirmOpen} close={closeConfirm} title="Title" handleClick={() => console.log('확인')}>
+            Confirm Message
+          </Confirm>
         </Card>
       </div>
     </>

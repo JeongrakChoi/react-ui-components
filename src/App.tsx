@@ -10,8 +10,8 @@ const App = () => {
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<HomeRoutes />} />
+          <Route path="/" element={<Navigate to="/homeRoute/home" replace />} />
+          <Route path="/homeRoute/*" element={<HomeRoutes />} />
         </Routes>
       </BrowserRouter>
     </div>

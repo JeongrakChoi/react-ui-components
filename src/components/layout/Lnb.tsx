@@ -12,7 +12,7 @@ const Lnb = () => {
 
   return (
     <nav className="lnb">
-      <h1>REACT UI COMPONENTS</h1>
+      <h2>NAVIGATION</h2>
       <ul>
         <li>
           <button onClick={() => handleLinkClick('button')}>Button</button>
@@ -25,6 +25,12 @@ const Lnb = () => {
         </li>
         <li>
           <button onClick={() => handleLinkClick('radio')}>Radio</button>
+        </li>
+        <li>
+          <button onClick={() => handleLinkClick('modal')}>Modal</button>
+        </li>
+        <li>
+          <button onClick={() => handleLinkClick('confirm')}>Confirm</button>
         </li>
       </ul>
     </nav>

@@ -1,0 +1,233 @@
+//Modal Wrap
+.modalWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeOut 0.25s ease-out forwards;
+  z-index: 999;
+
+  &.active {
+    animation: fadeIn 0.25s ease-in forwards;
+  }
+}
+
+//Modal Layer
+.modalLayer {
+  background: $color-white;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+
+  //Content
+  .modalContent {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  //Bottom Layer
+  &.bottom {
+    width: 100%;
+    height: 70%;
+    min-height: 600px;
+    left: 0;
+    bottom: 0;
+    will-change: transform;
+    animation: slideOut 0.25s ease-out;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+    border-radius: 15px 15px 0 0;
+
+    &.autoHeight {
+      height: auto;
+      min-height: auto;
+    }
+
+    .active & {
+      animation: slideIn 0.25s ease-in;
+    }
+
+    //Title
+    .modalTitle {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 80px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $color-gray;
+      font-weight: 700;
+
+      button {
+        display: none;
+      }
+
+      + .modalContent {
+        margin-top: 20px;
+        height: calc(100% - 100px);
+      }
+    }
+
+    //Handle bar
+    .modalHandleBar {
+      display: block;
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        background: #e0e0e0;
+        width: 38px;
+        height: 3px;
+        border-radius: 20px;
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        margin-left: -19px;
+      }
+    }
+  }
+
+  //Full Layer
+  &.full {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    left: 0;
+    bottom: 0;
+    border-radius: 0px;
+    animation: slideOut 0.25s ease-out;
+    padding-top: calc(env(safe-area-inset-top) + 20px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+
+    .active & {
+      animation: slideIn 0.25s ease-in;
+    }
+
+    //Title
+    .modalTitle {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 30px;
+      font-weight: 700;
+
+      button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        margin-right: 10px;
+        &:before {
+          content: '';
+          display: block;
+          width: 25px;
+          height: 2px;
+          background: $color-black;
+          position: absolute;
+          left: 50%;
+          top: 52%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          width: 25px;
+          height: 2px;
+          background: $color-black;
+          position: absolute;
+          left: 50%;
+          top: 52%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+
+      + .modalContent {
+        margin-top: 20px;
+        height: calc(100% - 50px);
+      }
+    }
+  }
+
+  //Green Bg
+  &.themeColor {
+    background: $color-theme;
+
+    .btnWrap {
+      background: none;
+    }
+  }
+
+  //Answer Type
+  &.rightColor {
+    background: $color-valid;
+
+    .button {
+      background-color: $color-white;
+      border-color: $color-white;
+      color: $color-valid;
+    }
+  }
+
+  &.errorColor {
+    background: $color-error;
+
+    .button {
+      background-color: $color-white;
+      border-color: $color-white;
+      color: $color-error;
+    }
+  }
+}
+
+//Modal Animate
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}

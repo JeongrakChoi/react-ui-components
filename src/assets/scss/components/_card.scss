@@ -2,17 +2,38 @@
   position: relative;
   margin-bottom: 150px;
 
-  > h2 {
-    font-size: 20px;
-    font-weight: 700;
-    padding: 20px 0;
-
-    &:before {
-      content: '- ';
-    }
+  &:before {
+    content: '';
+    display: block;
+    height: 20px;
+    margin-top: -20px;
+    visibility: hidden;
   }
 
   &:nth-last-child(1) {
     margin-bottom: 0;
+  }
+
+  > h2 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 250px;
+      height: 1px;
+      background: $color-black;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .con {
+    position: relative;
+    margin-top: 20px;
   }
 }
