@@ -9,6 +9,14 @@
   background-color: #313a46;
   overflow: auto;
 
+  h1 {
+    position: relative;
+    color: $color-white;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px;
+  }
+
   h2 {
     position: relative;
     color: #8391a2;
@@ -23,17 +31,31 @@
     li {
       button {
         display: block;
+        width: 100%;
         padding: 15px 30px;
         font-size: 15px;
         color: #8391a2;
         transition: 0.2s;
+        box-sizing: border-box;
+        text-align: left;
 
         &:before {
-          content: '- ';
+          content: '';
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-left: 5px solid #8391a2;
+          margin-right: 10px;
         }
 
         &:hover {
-          color: #fff;
+          color: $color-white;
+
+          &:before {
+            border-left-color: $color-white;
+          }
         }
       }
     }

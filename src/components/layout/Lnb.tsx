@@ -12,7 +12,7 @@ const Lnb = () => {
 
   return (
     <nav className="lnb">
-      <h2>NAVIGATION</h2>
+      <h1>REACT UI COMPONENTS</h1>
       <ul>
         <li>
           <button onClick={() => handleLinkClick('button')}>Button</button>
