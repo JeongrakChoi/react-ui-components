@@ -10,8 +10,8 @@ type InputProps = {
   isValid?: boolean;
   isError?: boolean;
   maxLength?: number;
-  validMessage?: string;
-  errorMessage?: string;
+  validMessage?: string | string[];
+  errorMessage?: string | string[];
 };
 
 const Input = ({
@@ -64,16 +64,20 @@ const Input = ({
         />
 
         {/* Valid */}
-        {validMessage && (
+        {Array.isArray(validMessage) && (
           <div className="validMessage">
-            <p>{validMessage}</p>
+            {validMessage.map((message, index) => (
+              <p key={index}>{message}</p>
+            ))}
           </div>
         )}
 
         {/* Error */}
-        {errorMessage && (
+        {Array.isArray(errorMessage) && (
           <div className="errorMessage">
-            <p>{errorMessage}</p>
+            {errorMessage.map((message, index) => (
+              <p key={index}>{message}</p>
+            ))}
           </div>
         )}
       </div>

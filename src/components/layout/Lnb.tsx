@@ -20,6 +20,9 @@ const Lnb = () => {
         <li>
           <button onClick={() => handleLinkClick('input')}>Input</button>
         </li>
+        <li>
+          <button onClick={() => handleLinkClick('radio')}>Radio</button>
+        </li>
       </ul>
     </nav>
   );

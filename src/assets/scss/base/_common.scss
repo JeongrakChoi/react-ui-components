@@ -89,18 +89,8 @@ button {
   margin: 0;
   border: none;
   vertical-align: middle;
-  -webkit-appearance: none;
 }
-input[type='text'],
-input[type='password'],
-input[type='email'],
-input[type='search'],
-input[type='image'],
-input[type='tel'],
-textarea {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-}
+
 input:focus {
   outline: none;
 }
@@ -159,21 +149,6 @@ sup {
 }
 .underLine {
   text-decoration: underline;
-}
-
-/* img drag 방지 */
-img {
-  -webkit-user-drag: none;
-}
-ion-img:root * {
-  -webkit-user-drag: none;
-}
-ion-button {
-  --box-shadow: none;
-  --background-activated: initial;
-  --background-focused: initial;
-  --background-hover: initial;
-  --background: transparent;
 }
 
 /* font */
