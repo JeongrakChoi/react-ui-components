@@ -15,3 +15,17 @@ create-react-app & Typescript
 - Modal
 - Confirm(Modal)
 - ...
+
+## Terminal
+
+```
+최초 실행시
+> npm install
+> npm start
+
+빌드
+> npm run build
+
+gh-pages 배포
+> npm run deploy
+```
