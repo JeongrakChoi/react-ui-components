@@ -8,6 +8,7 @@ import Input from '../components/ui/Input';
 import Check from '../components/ui/Check';
 import RadioGroup from '../components/ui/RadioGroup';
 import Radio from '../components/ui/Radio';
+import Pagination from '../components/ui/Pagination';
 import Modal from '../components/ui/Modal';
 import Confirm from '../components/ui/Confirm';
 
@@ -28,6 +29,9 @@ const Home = () => {
   const handleCheckChange3 = (checked: boolean) => {
     setIsChecked3(checked);
   };
+
+  // Pagination Code
+  const [currentPage, setCurrentPage] = useState(1);
 
   // Modal Code
   const [bottomModalOpen, setbottomModalOpen] = useState(false);
@@ -124,6 +128,14 @@ const Home = () => {
               Radio 4 (Disabled)
             </Radio>
           </RadioGroup>
+        </Card>
+
+        {/* PAGINATION */}
+        <Card idName="pagination" title="Pagination">
+          <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={10} />
+          <p>
+            This Paging : <em>{currentPage}</em>
+          </p>
         </Card>
 
         {/* MODAL */}

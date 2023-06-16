@@ -1,0 +1,105 @@
+.pagination {
+  ul {
+    position: relative;
+    display: inline-block;
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+
+      button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 2px solid $color-theme;
+        line-height: 20px;
+        text-align: center;
+        background-color: $color-white;
+        color: $color-black;
+
+        &.active {
+          background-color: $color-theme;
+          color: $color-white;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .paging {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $color-theme;
+    background-color: $color-theme;
+    font-size: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+
+    &.first {
+      &:before {
+        content: '<<';
+        display: inline;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 13px;
+        font-weight: 700;
+        color: $color-white;
+        line-height: 30px;
+      }
+    }
+
+    &.prev {
+      &:before {
+        content: '<';
+        display: inline;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 13px;
+        font-weight: 700;
+        color: $color-white;
+        line-height: 30px;
+      }
+    }
+
+    &.next {
+      &:before {
+        content: '>';
+        display: inline;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 13px;
+        font-weight: 700;
+        color: $color-white;
+        line-height: 30px;
+      }
+    }
+
+    &.last {
+      &:before {
+        content: '>>';
+        display: inline;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 13px;
+        font-weight: 700;
+        color: $color-white;
+        line-height: 30px;
+      }
+    }
+  }
+
+  + p {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
