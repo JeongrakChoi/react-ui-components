@@ -8,6 +8,7 @@ import Input from '../components/ui/Input';
 import Check from '../components/ui/Check';
 import RadioGroup from '../components/ui/RadioGroup';
 import Radio from '../components/ui/Radio';
+import Select from '../components/ui/Select';
 import Pagination from '../components/ui/Pagination';
 import Modal from '../components/ui/Modal';
 import Confirm from '../components/ui/Confirm';
@@ -28,6 +29,19 @@ const Home = () => {
 
   const handleCheckChange3 = (checked: boolean) => {
     setIsChecked3(checked);
+  };
+
+  // Select Box Code
+  const OPTIONS = [
+    { value: 'apple', name: '사과' },
+    { value: 'banana', name: '바나나' },
+    { value: 'orange', name: '오렌지' },
+  ];
+
+  const [selectedValue, setSelectedValue] = useState<string>('');
+
+  const handleSelect = (value: string) => {
+    setSelectedValue(value);
   };
 
   // Pagination Code
@@ -128,6 +142,14 @@ const Home = () => {
               Radio 4 (Disabled)
             </Radio>
           </RadioGroup>
+        </Card>
+
+        {/* SELECT */}
+        <Card idName="select" title="Select (Dropdown)">
+          <Select options={OPTIONS} onSelect={handleSelect} defaultText="여기를 눌러 선택" />
+          <p>
+            this value : <em>{selectedValue}</em>
+          </p>
         </Card>
 
         {/* PAGINATION */}

@@ -27,6 +27,9 @@ const Lnb = () => {
           <button onClick={() => handleLinkClick('radio')}>Radio</button>
         </li>
         <li>
+          <button onClick={() => handleLinkClick('select')}>Select</button>
+        </li>
+        <li>
           <button onClick={() => handleLinkClick('pagination')}>Pagination</button>
         </li>
         <li>
