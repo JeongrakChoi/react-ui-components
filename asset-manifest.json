@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-ui-components/static/css/main.a6117f54.css",
-    "main.js": "/react-ui-components/static/js/main.43b86e82.js",
+    "main.css": "/react-ui-components/static/css/main.66f12c71.css",
+    "main.js": "/react-ui-components/static/js/main.a791362e.js",
     "index.html": "/react-ui-components/index.html",
     "static/media/ico_mail.svg": "/react-ui-components/static/media/ico_mail.1cd548a840ea8138d577.svg",
     "static/media/ico_lock.svg": "/react-ui-components/static/media/ico_lock.a15d875ba5aedf26c512.svg",
     "static/media/ico_checked.svg": "/react-ui-components/static/media/ico_checked.8a3c8a320676199a5aac.svg",
-    "main.a6117f54.css.map": "/react-ui-components/static/css/main.a6117f54.css.map",
-    "main.43b86e82.js.map": "/react-ui-components/static/js/main.43b86e82.js.map"
+    "main.66f12c71.css.map": "/react-ui-components/static/css/main.66f12c71.css.map",
+    "main.a791362e.js.map": "/react-ui-components/static/js/main.a791362e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6117f54.css",
-    "static/js/main.43b86e82.js"
+    "static/css/main.66f12c71.css",
+    "static/js/main.a791362e.js"
   ]
 }
