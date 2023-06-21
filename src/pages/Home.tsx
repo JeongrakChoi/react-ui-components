@@ -148,7 +148,7 @@ const Home = () => {
         <Card idName="select" title="Select (Dropdown)">
           <Select options={OPTIONS} onSelect={handleSelect} defaultText="여기를 눌러 선택" />
           <p>
-            this value : <em>{selectedValue}</em>
+            This Value : <em>{selectedValue}</em>
           </p>
         </Card>
 
