@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/react-ui-components/static/css/main.66f12c71.css",
-    "main.js": "/react-ui-components/static/js/main.1a6ee077.js",
+    "main.css": "/react-ui-components/static/css/main.f4132923.css",
+    "main.js": "/react-ui-components/static/js/main.e3197622.js",
     "index.html": "/react-ui-components/index.html",
     "static/media/ico_mail.svg": "/react-ui-components/static/media/ico_mail.1cd548a840ea8138d577.svg",
     "static/media/ico_lock.svg": "/react-ui-components/static/media/ico_lock.a15d875ba5aedf26c512.svg",
     "static/media/ico_checked.svg": "/react-ui-components/static/media/ico_checked.8a3c8a320676199a5aac.svg",
-    "main.66f12c71.css.map": "/react-ui-components/static/css/main.66f12c71.css.map",
-    "main.1a6ee077.js.map": "/react-ui-components/static/js/main.1a6ee077.js.map"
+    "static/media/ico_search.svg": "/react-ui-components/static/media/ico_search.e5b0b9f5976d57ecaf4f.svg",
+    "main.f4132923.css.map": "/react-ui-components/static/css/main.f4132923.css.map",
+    "main.e3197622.js.map": "/react-ui-components/static/js/main.e3197622.js.map"
   },
   "entrypoints": [
-    "static/css/main.66f12c71.css",
-    "static/js/main.1a6ee077.js"
+    "static/css/main.f4132923.css",
+    "static/js/main.e3197622.js"
   ]
 }
