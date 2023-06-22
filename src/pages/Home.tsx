@@ -111,6 +111,9 @@ const Home = () => {
           />
           <hr />
           <Input type="text" placeholder="Input Text (Disabled)" disabled={true} />
+          <hr />
+          <hr />
+          <Input type="search" placeholder="Search Enter" />
         </Card>
 
         {/* CHECK BOX */}

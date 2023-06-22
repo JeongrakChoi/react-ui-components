@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, KeyboardEvent, MouseEvent, useState } from 'react';
 
 type InputProps = {
   type: string;
@@ -29,12 +29,17 @@ const Input = ({
 }: InputProps) => {
   const [isFocused, setIsFocused] = useState(false);
 
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   changeHandler ? changeHandler();
-  //   //value값 수정 시 커스텀 화면 제거
-  //   setShowError(false);
-  //   setShowValid(false);
+  // const handleSubmit = (e: KeyboardEvent<HTMLInputElement> | MouseEvent<HTMLButtonElement>) => {
+  //   if (e.key === 'Enter' || e.type === 'click') {
+  //     alert('submit');
+  //   }
   // };
+
+  const handleSearch = (e: KeyboardEvent<HTMLInputElement> | MouseEvent<HTMLButtonElement>) => {
+    if ('key' in e && e.key === 'Enter') {
+      alert('submit');
+    }
+  };
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -61,6 +66,7 @@ const Input = ({
           onChange={onChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
+          onKeyDown={type === 'search' ? handleSearch : undefined}
         />
 
         {/* Valid */}
@@ -79,6 +85,13 @@ const Input = ({
               <p key={index}>{message}</p>
             ))}
           </div>
+        )}
+
+        {/* Search Button */}
+        {type == 'search' && (
+          <button type="button" className="searchBtn" onClick={handleSearch}>
+            Search
+          </button>
         )}
       </div>
     </>
