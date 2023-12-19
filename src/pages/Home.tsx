@@ -13,6 +13,8 @@ import Pagination from '../components/ui/Pagination';
 import Modal from '../components/ui/Modal';
 import Confirm from '../components/ui/Confirm';
 
+import ico_play from '../assets/images/common/ico_play.svg';
+
 const Home = () => {
   // Check Box Code
   const [isChecked1, setIsChecked1] = useState(false);
@@ -81,6 +83,8 @@ const Home = () => {
   return (
     <>
       <div className="container">
+        <img src={ico_play} />
+
         {/* BUTTON */}
         <Card idName="button" title="Button">
           <Button>Button</Button> <hr />
