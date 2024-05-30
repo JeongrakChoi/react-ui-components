@@ -16,23 +16,6 @@ import Confirm from '../components/ui/Confirm';
 import ico_play from '../assets/images/common/ico_play.svg';
 
 const Home = () => {
-  // Check Box Code
-  const [isChecked1, setIsChecked1] = useState(false);
-  const [isChecked2, setIsChecked2] = useState(false);
-  const [isChecked3, setIsChecked3] = useState(false);
-
-  const handleCheckChange1 = (checked: boolean) => {
-    setIsChecked1(checked);
-  };
-
-  const handleCheckChange2 = (checked: boolean) => {
-    setIsChecked2(checked);
-  };
-
-  const handleCheckChange3 = (checked: boolean) => {
-    setIsChecked3(checked);
-  };
-
   // Select Box Code
   const OPTIONS = [
     { value: 'apple', name: '사과' },
@@ -122,15 +105,9 @@ const Home = () => {
 
         {/* CHECK BOX */}
         <Card idName="checkbox" title="Check Box">
-          <Check checked={isChecked1} onChange={handleCheckChange1}>
-            Checkbox 1
-          </Check>
-          <Check checked={isChecked2} onChange={handleCheckChange2}>
-            Checkbox 2
-          </Check>
-          <Check checked={isChecked3} onChange={handleCheckChange3} disabled={true}>
-            Checkbox 3 (Disabled)
-          </Check>
+          <Check>Checkbox 1</Check>
+          <Check>Checkbox 2</Check>
+          <Check disabled={true}>Checkbox 3 (Disabled)</Check>
         </Card>
 
         {/* RADIO */}

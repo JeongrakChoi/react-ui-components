@@ -1,22 +1,23 @@
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 
 type CheckProps = {
   children?: React.ReactNode;
-  onChange: (checked: boolean) => void;
   checked?: boolean;
   disabled?: boolean;
 };
 
-const Check = ({ children, onChange, checked, disabled }: CheckProps) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(event.target.checked);
+const Check = ({ children, checked, disabled }: CheckProps) => {
+  const [isChecked, setIsChecked] = useState(checked);
+
+  const handleChange = () => {
+    setIsChecked(!isChecked);
   };
 
   return (
     <>
       <div className="checkBox">
         <label>
-          <input type="checkbox" disabled={disabled} checked={checked} onChange={handleChange} />
+          <input type="checkbox" disabled={disabled} checked={isChecked} onChange={handleChange} />
           {children}
         </label>
       </div>
