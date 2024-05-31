@@ -105,9 +105,9 @@ const Home = () => {
 
         {/* CHECK BOX */}
         <Card idName="checkbox" title="Check Box">
-          <Check>Checkbox 1</Check>
-          <Check>Checkbox 2</Check>
-          <Check disabled={true}>Checkbox 3 (Disabled)</Check>
+          <Check />
+          <Check label="checkbox2" />
+          <Check disabled={true} label="checkbox disabled" />
         </Card>
 
         {/* RADIO */}

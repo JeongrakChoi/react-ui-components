@@ -1,24 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 
 type CheckProps = {
-  children?: React.ReactNode;
+  label?: React.ReactNode;
   checked?: boolean;
   disabled?: boolean;
+  onChange?: (checked: boolean) => void;
 };
 
-const Check = ({ children, checked, disabled }: CheckProps) => {
+const Check = ({ checked = false, label, disabled, onChange }: CheckProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
-  const handleChange = () => {
-    setIsChecked(!isChecked);
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newChecked = event.target.checked;
+    setIsChecked(newChecked);
+    if (onChange) {
+      onChange(newChecked);
+    }
+  };
+
+  // 이벤트 버블링 방지
+  const handleClick = (event: React.MouseEvent<HTMLInputElement>) => {
+    event.stopPropagation();
   };
 
   return (
     <>
-      <div className="checkBox">
+      <div className="checkBox" onClick={handleClick}>
         <label>
           <input type="checkbox" disabled={disabled} checked={isChecked} onChange={handleChange} />
-          {children}
+          {label}
         </label>
       </div>
     </>
