@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/react-ui-components/static/css/main.f4132923.css",
-    "main.js": "/react-ui-components/static/js/main.e3197622.js",
+    "main.css": "/react-ui-components/static/css/main.7f8739f7.css",
+    "main.js": "/react-ui-components/static/js/main.ecb9e834.js",
     "index.html": "/react-ui-components/index.html",
-    "static/media/ico_mail.svg": "/react-ui-components/static/media/ico_mail.1cd548a840ea8138d577.svg",
-    "static/media/ico_lock.svg": "/react-ui-components/static/media/ico_lock.a15d875ba5aedf26c512.svg",
-    "static/media/ico_checked.svg": "/react-ui-components/static/media/ico_checked.8a3c8a320676199a5aac.svg",
+    "static/media/ico_play.svg": "/react-ui-components/static/media/ico_play.7ea652f2e2909790cd20623a93393139.svg",
+    "static/media/ico_mail.svg": "/react-ui-components/static/media/ico_mail.e9976d5b5b03c8f604f1.svg",
+    "static/media/ico_lock.svg": "/react-ui-components/static/media/ico_lock.ac0df5b9122fba6a8a6f.svg",
+    "static/media/ico_checked.svg": "/react-ui-components/static/media/ico_checked.134ac87d2e68fe1d4c75.svg",
     "static/media/ico_search.svg": "/react-ui-components/static/media/ico_search.e5b0b9f5976d57ecaf4f.svg",
-    "main.f4132923.css.map": "/react-ui-components/static/css/main.f4132923.css.map",
-    "main.e3197622.js.map": "/react-ui-components/static/js/main.e3197622.js.map"
+    "main.7f8739f7.css.map": "/react-ui-components/static/css/main.7f8739f7.css.map",
+    "main.ecb9e834.js.map": "/react-ui-components/static/js/main.ecb9e834.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4132923.css",
-    "static/js/main.e3197622.js"
+    "static/css/main.7f8739f7.css",
+    "static/js/main.ecb9e834.js"
   ]
 }
