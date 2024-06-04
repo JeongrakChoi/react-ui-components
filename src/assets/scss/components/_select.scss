@@ -1,44 +1,79 @@
 .selectBox {
-  position: relative;
-  display: block;
+  position:relative;
+  display:block;
+  max-width:300px;
+
+  .selectTit{
+    position:absolute;
+    left:20px;
+    top:-6px;
+    font-size:13px;
+    color:#000;
+    z-index:1;
+    padding:0 5px;
+
+    span{
+      position:relative;
+      z-index:1;
+    }
+
+    &:after{
+      content:'';
+      display:block;
+      position:absolute;
+      left:0;
+      top:6px;
+      width:100%;
+      height:1px;
+      background:#fff
+    }
+  }
 
   .selectTxt {
-    position: relative;
-    border: 2px solid #666;
-    border-radius: 5px;
-    background: $color-white;
-    box-sizing: border-box;
-    padding: 0px 10px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 15px;
-    font-weight: 700;
+    position:relative;
+    border:1px solid #c4c4c4;
+    border-radius:5px;
+    background-color:#fff;
+    box-sizing:border-box;
+    padding:0px 10px;
+    height:50px;
+    line-height:50px;
+    font-size:15px;
+    cursor:pointer;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
 
   .selectList {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 40px;
-    width: 100%;
-    max-height: 160px;
-    background: $color-white;
-    border: 2px solid $color-gray;
-    box-sizing: border-box;
-    overflow-y: auto;
+    display:none;
+    position:absolute;
+    left:0;
+    top:50px;
+    width:100%;
+    max-height:200px;
+    background-color:#fff;
+    box-sizing:border-box;
+    overflow-y:auto;
+    box-shadow:rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+    z-index:5;
 
     li {
-      height: 40px;
-      line-height: 40px;
-      font-size: 14px;
-      padding: 0 10px;
+      height:50px;
+      line-height:50px;
+      font-size:15px;
+      padding:0 10px;
+      cursor:pointer;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
   }
 
   //active
   &.active {
     .selectTxt {
-      border-color: $color-theme;
+      border-color: #1976D2;
     }
 
     .selectList {
@@ -47,6 +82,14 @@
       li:hover {
         background: #ddd;
       }
+    }
+  }
+
+  //disabled
+  &.disabled{
+    .selectTxt{
+      cursor:default;
+      background-color:#eee;
     }
   }
 

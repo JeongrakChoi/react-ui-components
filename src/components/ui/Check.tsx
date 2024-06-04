@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 
 type CheckBoxProps = {
   checked?: boolean;
@@ -8,8 +8,12 @@ type CheckBoxProps = {
   onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
 };
 
-const Check = ({ checked = false, label, disabled, onChange, onClick }: CheckBoxProps) => {
-  const [isChecked, setIsChecked] = useState(checked);
+const Check = ({ checked: checkedProp = false, label, disabled, onChange, onClick }: CheckBoxProps) => {
+  const [isChecked, setIsChecked] = useState(checkedProp);
+
+  useEffect(() => {
+    setIsChecked(checkedProp);
+  }, [checkedProp]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newChecked = event.target.checked;
@@ -30,7 +34,7 @@ const Check = ({ checked = false, label, disabled, onChange, onClick }: CheckBox
   };
 
   return (
-    <div className="checkBox" onClick={stopPropagation}>
+    <div className={`checkBox ${isChecked ? 'checked' : ''}`} onClick={stopPropagation}>
       <label>
         <input type="checkbox" disabled={disabled} checked={isChecked} onChange={handleChange} onClick={handleClick} />
         {label}

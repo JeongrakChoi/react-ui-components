@@ -8,7 +8,8 @@ import Input from '../components/ui/Input';
 import Check from '../components/ui/Check';
 import RadioGroup from '../components/ui/RadioGroup';
 import Radio from '../components/ui/Radio';
-import Select from '../components/ui/Select';
+import SelectBox from '../components/ui/SelectBox';
+import SelectItem from '../components/ui/SelectItem';
 import Pagination from '../components/ui/Pagination';
 import Modal from '../components/ui/Modal';
 import Confirm from '../components/ui/Confirm';
@@ -16,14 +17,7 @@ import Confirm from '../components/ui/Confirm';
 import ico_play from '../assets/images/common/ico_play.svg';
 
 const Home = () => {
-  // Select Box Code
-  const OPTIONS = [
-    { value: 'apple', name: '사과' },
-    { value: 'banana', name: '바나나' },
-    { value: 'orange', name: '오렌지' },
-  ];
-
-  const [selectedValue, setSelectedValue] = useState<string>('');
+  const [selectedValue, setSelectedValue] = useState<string>('select2d');
 
   const handleSelect = (value: string) => {
     setSelectedValue(value);
@@ -130,7 +124,11 @@ const Home = () => {
 
         {/* SELECT */}
         <Card idName="select" title="Select (Dropdown)">
-          <Select options={OPTIONS} onSelect={handleSelect} defaultText="여기를 눌러 선택" />
+          <SelectBox title="테마" value="system" onChange={handleSelect}>
+            <SelectItem value="system">시스템 설정</SelectItem>
+            <SelectItem value="light">라이트 모드</SelectItem>
+            <SelectItem value="dark">다크 모드</SelectItem>
+          </SelectBox>
           <p>
             This Value : <em>{selectedValue}</em>
           </p>
