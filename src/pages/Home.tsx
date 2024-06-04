@@ -17,7 +17,7 @@ import Confirm from '../components/ui/Confirm';
 import ico_play from '../assets/images/common/ico_play.svg';
 
 const Home = () => {
-  const [selectedValue, setSelectedValue] = useState<string>('select2d');
+  const [selectedValue, setSelectedValue] = useState<string>('');
 
   const handleSelect = (value: string) => {
     setSelectedValue(value);
