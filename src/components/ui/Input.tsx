@@ -16,7 +16,7 @@ type InputProps = {
 
 const Input = ({
   type,
-  value,
+  value: initialValue,
   onChange,
   placeholder,
   className,
@@ -28,6 +28,7 @@ const Input = ({
   errorMessage,
 }: InputProps) => {
   const [isFocused, setIsFocused] = useState(false);
+  const [inputValue, setInputValue] = useState(initialValue || '');
 
   // const handleSubmit = (e: KeyboardEvent<HTMLInputElement> | MouseEvent<HTMLButtonElement>) => {
   //   if (e.key === 'Enter' || e.type === 'click') {
@@ -38,6 +39,13 @@ const Input = ({
   const handleSearch = (e: KeyboardEvent<HTMLInputElement> | MouseEvent<HTMLButtonElement>) => {
     if ('key' in e && e.key === 'Enter') {
       alert('submit');
+    }
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+    if (onChange) {
+      onChange(e);
     }
   };
 
@@ -58,7 +66,7 @@ const Input = ({
       >
         <input
           type={type}
-          value={value}
+          value={inputValue}
           placeholder={placeholder}
           disabled={disabled}
           maxLength={maxLength}
