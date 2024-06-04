@@ -71,7 +71,7 @@ const Input = ({
           disabled={disabled}
           maxLength={maxLength}
           className="input"
-          onChange={onChange}
+          onChange={handleChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
           onKeyDown={type === 'search' ? handleSearch : undefined}
